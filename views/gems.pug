@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  
+  - let resultNames = ["Emerald", "Sapphire", "Ruby"]
+  - let resultColors = ["Green", "Blue", "Red"]
+  - let resultHardness = [7.5, 9, 9]
+  - let testNum = 4
+  div(class="container-fluid")
+    div(class="row")
+        - for(var i = 0; i < resultNames.length; i++)
+            div(class="col-sm-2") #{resultNames[i]} <br> #{resultColors[i]} <br> #{resultHardness[i]}
